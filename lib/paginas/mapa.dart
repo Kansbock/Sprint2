@@ -66,12 +66,6 @@ class _MapaState extends State<Mapa> {
           maxScale: 2.5,
           child: Stack(
             children: [
-              Positioned.fill(
-                child: Image.asset(
-                  'assets/mapa.jpg',
-                  fit: BoxFit.cover,
-                ),
-              ),
               GestureDetector(
                 onTapDown: (TapDownDetails details) {
                   setState(() {
@@ -92,7 +86,7 @@ class _MapaState extends State<Mapa> {
                 child: Container(
                   width: screenSize.width,
                   height: screenSize.height,
-                  color: Colors.transparent,
+                  color: Colors.white,
                   child: CustomPaint(
                     painter: GridPainter(grid, path),
                   ),
